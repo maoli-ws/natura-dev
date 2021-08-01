@@ -6,8 +6,8 @@ export default function Layout(props) {
   return (
     <>
       <Head>
-        <title>Paletas de hielo Maoli</title>
-        <meta name="description" content="Paletas de hielo en Santa Fe, Xochitepec, Morelos" />
+        <title>Natura - Cris</title>
+        <meta name="description" content="Natura en Santa Fe, Xochitepec, Morelos" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
