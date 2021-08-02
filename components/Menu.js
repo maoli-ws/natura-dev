@@ -36,7 +36,7 @@ function Menu(props) {
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          Paletas MAOLI
+          Natura
         </Navbar.Brand>
         {!props.home && (
           <>

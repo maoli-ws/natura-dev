@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <Layout home>
-      <h1 className={styles.title}>Paletas de Hielo Maoli</h1>
+      <h1 className={styles.title}>Natura</h1>
       <div className={styles.container}>
         <Card style={{ width: "18rem" }}>
           <Card.Header>Sabores disponibles</Card.Header>
