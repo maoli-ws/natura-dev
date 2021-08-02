@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-natura-dev-184309-authRole",
+      "UnauthRoleArn": "arn:aws:iam::100127809745:role/amplify-natura-dev-184309-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::100127809745:role/amplify-natura-dev-184309-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-natura-dev-184309-deployment",
+      "UnauthRoleName": "amplify-natura-dev-184309-unauthRole",
+      "StackName": "amplify-natura-dev-184309",
+      "StackId": "arn:aws:cloudformation:us-east-2:100127809745:stack/amplify-natura-dev-184309/3c6a01f0-f322-11eb-bfd7-06f447688f88",
+      "AmplifyAppId": "dccdpg89j4pe4"
+    }
+  }
+}
