@@ -27,7 +27,7 @@ export default function Home() {
   const list = items.map((item) => {
     return (
       item.quantity > 0 && <ListGroup.Item key={item.flavor}>
-        <Item list flavor={item.flavor}></Item>
+        <Item list flavor={item.flavor} quantity={`${item.quantity} piezas`}></Item>
       </ListGroup.Item>
     );
   });
@@ -37,7 +37,7 @@ export default function Home() {
       <h1 className={styles.title}>Natura</h1>
       <div className={styles.container}>
         <Card style={{ width: "18rem" }}>
-          <Card.Header>Sabores disponibles</Card.Header>
+          <Card.Header>Productos disponibles</Card.Header>
           <ListGroup variant="flush">{list}</ListGroup>
         </Card>
       </div>

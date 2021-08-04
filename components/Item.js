@@ -34,6 +34,7 @@ export default function Item(props) {
     <>
       <InputGroup className="mb-3">
         <InputGroup.Text className="mb-6">{props.flavor}</InputGroup.Text>
+        <InputGroup.Text className="mb-6">{props.quantity}</InputGroup.Text>
         {!props.list && <FormControl
           aria-label="Example text with button addon"
           aria-describedby="basic-addon1"
