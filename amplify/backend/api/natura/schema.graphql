@@ -1,0 +1,5 @@
+type Products @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  flavor: String
+  quantity: Int
+}
