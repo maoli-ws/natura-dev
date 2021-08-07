@@ -25,7 +25,8 @@ function Menu(props) {
   }, [isLogged, username]);
 
   return (
-    
+    <>
+    </>
   );
 }
 

@@ -24,7 +24,8 @@ export default function Home() {
 
   const list = items.map((item) => {
     return (
-      item.quantity > 0 && 
+      <>
+      </>
     );
   });
 
