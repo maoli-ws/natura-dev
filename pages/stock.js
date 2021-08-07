@@ -1,5 +1,3 @@
-import { ListGroup } from "react-bootstrap";
-import Badge from "react-bootstrap/Badge";
 import Layout from "../components/Layout";
 import Item from "../components/Item";
 import { withAuthenticator } from '@aws-amplify/ui-react';
@@ -32,20 +30,16 @@ function Stock() {
 
   const list = items.map((item) => {
     return (
-      <ListGroup.Item key={item.flavor}>
         <Item stock value={item.quantity} flavor={item.flavor}></Item>
-      </ListGroup.Item>
     );
   });
   return (
     <Layout>
       <h1>
         Inventario{" "}
-        <Badge pill bg="secondary" className={styles.badge} >
           {total}
-        </Badge>
       </h1>
-      <ListGroup>{list}</ListGroup>
+      {list}
     </Layout>
   );
 }

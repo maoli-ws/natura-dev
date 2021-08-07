@@ -1,4 +1,3 @@
-import { ListGroup } from "react-bootstrap";
 import Layout from "../components/Layout";
 import Item from "../components/Item";
 import { withAuthenticator } from '@aws-amplify/ui-react';
@@ -24,15 +23,13 @@ function Order() {
 
   const list = items.map((item) => {
     return (
-      <ListGroup.Item key={item.flavor}>
         <Item order value={item.quantity} flavor={item.flavor}></Item>
-      </ListGroup.Item>
     );
   });
   return (
     <Layout>
       <h1>Ventas</h1>
-      <ListGroup>{list}</ListGroup>
+      {list}
     </Layout>
   );
 }

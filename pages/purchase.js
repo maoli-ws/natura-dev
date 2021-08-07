@@ -1,4 +1,3 @@
-import { ListGroup } from "react-bootstrap";
 import Layout from "../components/Layout";
 import Item from "../components/Item";
 import AddItem from "../components/AddItem";
@@ -25,16 +24,14 @@ function Purchase() {
 
   const list = items.map((item) => {
     return (
-      <ListGroup.Item key={item.flavor}>
         <Item buy value={item.quantity} flavor={item.flavor}></Item>
-      </ListGroup.Item>
     );
   });
   return (
     <Layout>
       <h1>Compras</h1>
-      <ListGroup>{list}</ListGroup>
-      <ListGroup variant="flush"><AddItem></AddItem></ListGroup>
+      {list}
+      <AddItem></AddItem>
     </Layout>
   );
 }

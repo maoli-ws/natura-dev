@@ -14,10 +14,8 @@
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.7",
     "aws-amplify": "^4.2.0",
-    "bootstrap": "^5.0.0-beta3",
     "next": "v10.x.x",
     "react": "17.0.2",
-    "react-bootstrap": "^1.6.1",
     "react-dom": "17.0.2",
     "react-markdown": "^6.0.2"
   },
