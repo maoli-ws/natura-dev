@@ -36,7 +36,7 @@ function Menu(props) {
             height="30"
             className="d-inline-block align-top"
           />{" "}
-          Natura
+          {process.env.NEXT_PUBLIC_PROJECT_NAME}
         </Navbar.Brand>
         {!props.home && (
           <>

@@ -6,7 +6,7 @@ export default function Layout(props) {
   return (
     <>
       <Head>
-        <title>Natura - Cris</title>
+        <title>{process.env.NEXT_PUBLIC_PROJECT_NAME} </title>
         <meta name="description" content="Natura en Santa Fe, Xochitepec, Morelos" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

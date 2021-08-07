@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { DataStore, Predicates, SortDirection } from "aws-amplify";
-import { ListGroup } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Item from "../components/Item";
 import Layout from "../components/Layout";
@@ -26,20 +26,29 @@ export default function Home() {
 
   const list = items.map((item) => {
     return (
-      item.quantity > 0 && <ListGroup.Item key={item.flavor}>
-        <Item list flavor={item.flavor} quantity={`${item.quantity} piezas`}></Item>
-      </ListGroup.Item>
+      item.quantity > 0 && 
+      <Col>
+        <Card>
+          <Card.Img variant="top" src="holder.js/100px160" />
+          <Card.Body>
+            <Card.Title>{item.flavor}</Card.Title>
+            <Card.Text>
+              {item.description}
+              Cantidad disponible: {item.quantity}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </Col>
     );
   });
 
   return (
     <Layout home>
-      <h1 className={styles.title}>Natura</h1>
+      <h1 className={styles.title}>{process.env.NEXT_PUBLIC_PROJECT_NAME}</h1>
       <div className={styles.container}>
-        <Card style={{ width: "18rem" }}>
-          <Card.Header>Productos disponibles</Card.Header>
-          <ListGroup variant="flush">{list}</ListGroup>
-        </Card>
+        <Row xs={1} md={2} className="g-4">
+          {list}
+        </Row>  
       </div>
     </Layout>
   );
