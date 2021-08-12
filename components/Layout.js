@@ -11,8 +11,20 @@ export default function Layout(props) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Menu home={props.home} />
+      <div className="block">
+        <section className="hero is-primary">
+          <div className="hero-body">
+            <p className="title">
+              {process.env.NEXT_PUBLIC_PROJECT_NAME}
+            </p>
+            <p className="subtitle">
+              Lo que estabas buscando
+            </p>
+          </div>
+        </section>
+      </div>
       <div className="container is-fluid">
-        <Menu home={props.home}/>
         <>{props.children}</>
       </div>
         <footer className={styles.footer}>

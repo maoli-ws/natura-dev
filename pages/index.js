@@ -35,9 +35,6 @@ export default function Home() {
       return (
         <Layout home>
           <div className="block">
-            <h1 className={styles.title}>{process.env.NEXT_PUBLIC_PROJECT_NAME}</h1>
-          </div>  
-          <div className="block">
             <div className="columns is-multiline">
               {items && items.map((item, i) => {
                 return (
