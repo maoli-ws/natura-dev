@@ -1,5 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import Amplify from 'aws-amplify';
 import config from '../src/aws-exports';
 

@@ -22,19 +22,34 @@ export default function Home() {
     return () => subscription.unsubscribe();
   }, [setItems]);
 
-  const list = items.map((item) => {
-    return (
-      <>
-      </>
-    );
-  });
-
-  return (
-    <Layout home>
-      <h1 className={styles.title}>{process.env.NEXT_PUBLIC_PROJECT_NAME}</h1>
-      <div className={styles.container}>
-          {list}
-      </div>
-    </Layout>
-  );
+  // const list = items.map((item) => {
+  //   return (
+  //     <div className="column">1</div>
+  //       <div className="column">2</div>
+  //       <div className="column">3</div>
+  //       <div className="column">4</div>
+  //       </div>
+  //       );
+  //     });
+      
+      return (
+        <Layout home>
+          <div className="block">
+            <h1 className={styles.title}>{process.env.NEXT_PUBLIC_PROJECT_NAME}</h1>
+          </div>  
+          <div className="block">
+            <div className="columns is-multiline">
+              {items && items.map((item, i) => {
+                return (
+                  <div key={i} className="column is-one-quarter">
+                    <div className="block">
+                      <Item flavor={item.flavor} quantity={item.quantity}></Item>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </Layout>
+      );
 }

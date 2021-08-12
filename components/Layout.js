@@ -11,18 +11,20 @@ export default function Layout(props) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Menu home={props.home}/>
-      <>{props.children}</>
-      <footer className={styles.footer}>
-        <a
-          href="https://maoli.ws"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hecho con ❤️ {" "}
-          {" "} por maoli.ws
-        </a>
-      </footer>
+      <div className="container is-fluid">
+        <Menu home={props.home}/>
+        <>{props.children}</>
+      </div>
+        <footer className={styles.footer}>
+          <a
+            href="https://maoli.ws"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hecho con ❤️ {" "}
+            {" "} por maoli.ws
+          </a>
+        </footer>
     </>
   );
 }
