@@ -10,8 +10,8 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "flavor": {
-                    "name": "flavor",
+                "title": {
+                    "name": "title",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -21,6 +21,34 @@ export const schema = {
                     "name": "quantity",
                     "isArray": false,
                     "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "description": {
+                    "name": "description",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "image": {
+                    "name": "image",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "subtitle": {
+                    "name": "subtitle",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "barCode": {
+                    "name": "barCode",
+                    "isArray": false,
+                    "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -69,5 +97,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "2e30e00d970d38e59ca0274fa3e948bd"
+    "version": "3baa600e71e298cd41a2658d210eb7b7"
 };

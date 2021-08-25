@@ -10,8 +10,12 @@ type ProductsMetaData = {
 
 export declare class Products {
   readonly id: string;
-  readonly flavor?: string;
+  readonly title?: string;
   readonly quantity?: number;
+  readonly description?: string;
+  readonly image?: string;
+  readonly subtitle?: string;
+  readonly barCode?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<Products, ProductsMetaData>);

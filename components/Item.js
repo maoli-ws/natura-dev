@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { DataStore } from "aws-amplify";
 import { Products } from "../src/models";
+import Image from 'next/image';
+import Modal from "./Modal";
+import useModal from "../hooks/useModal";
 
 export default function Item(props) {
   async function saveSale() {
@@ -29,32 +33,35 @@ export default function Item(props) {
     );
   }
 
+  const { isShowing, toggle } = useModal();
+  
   return (
     <div className="card">
       <div className="card-image">
         <figure className="image is-4by3">
-          <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image"/>
+          <Image
+            src={props.image ? props.image : 'https://naturamaoli184309-dev.s3.us-east-2.amazonaws.com/large-images/1280x960.png'}
+            alt="Placeholder image"
+            layout="fill"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
+            placeholder="blur"
+            onClick={toggle}
+          />
+          <Modal isShowing={isShowing} hide={toggle} image={props.image ? props.image : 'https://naturamaoli184309-dev.s3.us-east-2.amazonaws.com/large-images/1280x960.png'} />
         </figure>
       </div>
       <div className="card-content">
         <div className="media">
-          <div className="media-left">
-            <figure className="image is-48x48">
-              <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image"/>
-            </figure>
-          </div>
           <div className="media-content">
-            <p className="title is-4">John Smith</p>
-            <p className="subtitle is-6">@johnsmith</p>
+            <p className="title is-4">{props.title}</p>
+            <p className="subtitle is-6">{props.subtitle}</p>
           </div>
         </div>
 
         <div className="content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-          <a href="#">#css</a> <a href="#">#responsive</a>
-          <br/>
-          <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+          {props.description}
+          <br />
+          <p>Piezas disponibles: {props.quantity}</p>
         </div>
       </div>
     </div>

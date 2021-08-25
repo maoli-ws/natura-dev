@@ -1,5 +1,10 @@
 type Products @model @auth(rules: [{allow: public}]) {
   id: ID!
-  flavor: String
+  title: String
   quantity: Int
+  description: String
+  image: String
+  subtitle: String
+  barCode: String
 }
+ 

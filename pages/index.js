@@ -12,7 +12,7 @@ export default function Home() {
     fetchItems();
     async function fetchItems() {
       const itemData = await DataStore.query(Products, Predicates.ALL, {
-        sort: (s) => s.flavor(SortDirection.ASCENDING),
+        sort: (s) => s.title(SortDirection.ASCENDING),
       });
       setItems(itemData);
     }
@@ -21,16 +21,6 @@ export default function Home() {
     );
     return () => subscription.unsubscribe();
   }, [setItems]);
-
-  // const list = items.map((item) => {
-  //   return (
-  //     <div className="column">1</div>
-  //       <div className="column">2</div>
-  //       <div className="column">3</div>
-  //       <div className="column">4</div>
-  //       </div>
-  //       );
-  //     });
       
       return (
         <Layout home>
@@ -40,10 +30,16 @@ export default function Home() {
                 return (
                   <div key={i} className="column is-one-quarter">
                     <div className="block">
-                      <Item flavor={item.flavor} quantity={item.quantity}></Item>
+                      <Item
+                        flavor={item.title}
+                        quantity={item.quantity}
+                        description={item.description}
+                        image={item.image}
+                        subtitle={item.subtitle}
+                      ></Item>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>

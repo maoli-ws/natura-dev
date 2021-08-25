@@ -10,6 +10,11 @@
       "StackName": "amplify-natura-dev-184309",
       "StackId": "arn:aws:cloudformation:us-east-2:100127809745:stack/amplify-natura-dev-184309/3c6a01f0-f322-11eb-bfd7-06f447688f88",
       "AmplifyAppId": "dccdpg89j4pe4"
+    },
+    "categories": {
+      "auth": {
+        "natura": {}
+      }
     }
   }
 }
